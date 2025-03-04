@@ -1,37 +1,49 @@
-$(document).ready(function () {
-  $("#contactForm").submit(function (e) {
-    e.preventDefault(); // Prevent the default form submission
+// script.js
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
 
-    // Capture form data
-    const formData = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      message: $("#message").val(),
-    };
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const errorDiv = document.getElementById("error");
+    const successDiv = document.getElementById("success");
 
-    // Ajax request
-    $.ajax({
-      type: "POST",
-      url: "contact.php", // PHP file for handling form data
-      data: formData,
-      dataType: "json",
-      success: function (response) {
-        if (response.success) {
-          $("#formResponse")
-            .text("Message sent successfully!")
-            .css("color", "green");
-          $("#contactForm")[0].reset(); // Clear form on success
+    errorDiv.textContent = "";
+    successDiv.textContent = "";
+
+    // Basic validation
+    if (name === "" || email === "" || message === "") {
+      errorDiv.textContent = "All fields are required.";
+      return;
+    }
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      errorDiv.textContent = "Please enter a valid email.";
+      return;
+    }
+
+    // Ajax request using Fetch API
+    fetch("contact.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(
+        email
+      )}&message=${encodeURIComponent(message)}`,
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        if (data === "success") {
+          successDiv.textContent = "Your message has been sent successfully!";
+          document.getElementById("contactForm").reset();
         } else {
-          $("#formResponse")
-            .text("Failed to send message.")
-            .css("color", "red");
+          errorDiv.textContent = "Failed to send message. Please try again.";
         }
-      },
-      error: function () {
-        $("#formResponse")
-          .text("An error occurred. Please try again.")
-          .css("color", "red");
-      },
-    });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        errorDiv.textContent = "An error occurred. Please try again.";
+      });
   });
-});
