@@ -9,9 +9,6 @@
         $subject = trim($_POST["subject"]);
         $message = trim($_POST["message"]);
 
-        // http_response_code(400);
-        // echo $_POST['message']; exit;
-
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($subject) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
@@ -22,7 +19,7 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "jihadkhan07@gmail.com";
+        $recipient = "dgcreatividad@gmail.com";
 
         // Set the email subject.
         $subject = "New contact from $name";
@@ -36,33 +33,21 @@
         // Build the email headers.
         $email_headers = "From: $name <$email>";
 
-        header('Content-type: application/json');
-        $response = array();
-
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            $response_array['status'] = 'success';
-            $response_array['message'] = "Thank You! Your message has been sent.";
-            header('Content-type: application/json');
-            echo json_encode($response_array);
+            echo "Thank You! Your message has been sent.";
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            $response_array['status'] = 'error';
-            $response_array['message'] = "Oops! Something went wrong and we couldn't send your message.";
-            header('Content-type: application/json');
-            echo json_encode($response_array);
+            echo "Oops! Something went wrong and we couldn't send your message.";
         }
 
     } else {
         // Not a POST request, set a 403 (forbidden) response code.
         http_response_code(403);
-        $response_array['status'] = 'error';
-        $response_array['message'] = "There was a problem with your submission, please try again.";
-        header('Content-type: application/json');
-        echo json_encode($response_array);
+        echo "There was a problem with your submission, please try again.";
     }
 
 ?>
