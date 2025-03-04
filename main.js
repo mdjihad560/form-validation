@@ -5,7 +5,7 @@ contactForm.addEventListener("submit", function (e) {
 
   const formData = new FormData(contactForm);
 
-  fetch("../php/contact.php", {
+  fetch("contact.php", {
     method: "POST",
     body: formData,
   })
