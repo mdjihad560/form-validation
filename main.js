@@ -19,7 +19,7 @@ document
       return;
     }
     if (!/^\S+@\S+\.\S+$/.test(email)) {
-      errorDiv.textContent = "jihadkhan07@gmail.com";
+      errorDiv.textContent = "Please enter a valid email.";
       return;
     }
 
