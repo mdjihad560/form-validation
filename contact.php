@@ -1,15 +1,24 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name = trim($_POST["name"] ?? "");
-    $email = trim($_POST["email"] ?? "");
-    $message = trim($_POST["message"] ?? "");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars(trim($_POST["name"]));
+    $email = htmlspecialchars(trim($_POST["email"]));
+    $message = htmlspecialchars(trim($_POST["message"]));
 
-    if ($name && $email && $message && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Simulate sending email (you can replace this with actual mail() function)
-        echo "success";
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        $to = "jihadkhan07@gmail.com";  // Replace with your email
+        $subject = "New Contact Form Message";
+        $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+        $headers = "From: $email";
+
+        if (mail($to, $subject, $body, $headers)) {
+            echo "Message sent successfully!";
+        } else {
+            echo "Failed to send message. Please try again.";
+        }
     } else {
-        echo "error";
+        echo "All fields are required!";
     }
 } else {
-    header("HTTP/1.1 405 Method Not Allowed");
+    echo "Invalid request!";
 }
+?>

@@ -1,49 +1,22 @@
-// script.js
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+const contactForm = document.getElementById("contactForm");
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-    const errorDiv = document.getElementById("error");
-    const successDiv = document.getElementById("success");
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    errorDiv.textContent = "";
-    successDiv.textContent = "";
+  const formData = new FormData(contactForm);
 
-    // Basic validation
-    if (name === "" || email === "" || message === "") {
-      errorDiv.textContent = "All fields are required.";
-      return;
-    }
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-      errorDiv.textContent = "Please enter a valid email.";
-      return;
-    }
-
-    // Ajax request using Fetch API
-    fetch("contact.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(
-        email
-      )}&message=${encodeURIComponent(message)}`,
+  fetch("contact.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("response").innerHTML = data;
+      contactForm.reset();
     })
-      .then((response) => response.text())
-      .then((data) => {
-        if (data === "success") {
-          successDiv.textContent = "Your message has been sent successfully!";
-          document.getElementById("contactForm").reset();
-        } else {
-          errorDiv.textContent = "Failed to send message. Please try again.";
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        errorDiv.textContent = "An error occurred. Please try again.";
-      });
-  });
+    .catch((error) => {
+      document.getElementById("response").innerHTML =
+        "An error occurred. Please try again.";
+      console.error("Error:", error);
+    });
+});
