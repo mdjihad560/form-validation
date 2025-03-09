@@ -4,7 +4,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const form = e.target;
   const formData = new FormData(form);
 
-  fetch("mail.php", {
+  fetch("https://ajaxforms.netlify.app/mail.php", {
     method: "POST",
     body: formData,
   })
