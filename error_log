@@ -1,0 +1,50 @@
+[09-Mar-2025 15:08:05 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:08:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:13:50 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:13:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:13:54 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:13:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:14:15 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:14:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:14:39 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:14:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:15:16 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:15:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:15:20 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:15:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:15:28 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:15:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:16:17 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:16:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:16:21 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5
+[09-Mar-2025 15:16:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/framerpe/wp.framerpeak.com/form/mail.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/framerpe/wp.framerpeak.com/form/mail.php on line 5

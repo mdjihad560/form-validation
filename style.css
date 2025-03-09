@@ -1,97 +1,53 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background: #1b1c1e;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-h1 {
-    font-family: 'Playfair Display',
-        serif;
-    font-size: 59px;
-    color: white;
-    font-weight: 600;
-    padding-bottom: 20px;
-}
-
-p {
-    color: #d2d2d2;
-}
-
-p,
-input,
-textarea,
-label {
-    font-family: 'Poppins',
-        sans-serif;
-}
-
-.container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 5%;
-}
-
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
-    padding: 20px 0;
-}
-
-input,
-textarea,
-label {
-    display: block;
-    margin: 0 auto;
+.contact-form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
     width: 100%;
-    color: #828282;
 }
 
-input,
-textarea {
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px solid #828282;
+.contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-input[type=submit] {
-    background-color: #545557;
-    padding: 15px 0;
-    color: white;
-    font-size: 18px;
-    border-bottom: none;
-    margin-top: 30px;
-    cursor: pointer;
-    transition: all .3s ease;
-}
-
-input[type=submit]:hover {
-    background: #FFF;
-    color: #1b1c1e;
-}
-
-input,
-textarea {
-    color: white;
-    font-size: 18px;
+#contactForm input, #contactForm textarea, #contactForm button {
+    width: 100%;
+    margin-bottom: 10px;
     padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-input:focus,
-textarea:focus {
-    outline: 1px solid #828282;
-}
-
-a {
-    color: #828282;
-    font-style: italic;
-}
-
-a:hover {
+#contactForm button {
+    background-color: #3498db;
     color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contactForm button:hover {
+    background-color: #2980b9;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+#response {
+    text-align: center;
+    margin-top: 10px;
 }

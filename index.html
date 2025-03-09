@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact form</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJAX Contact Form</title>
+<style>
+    form { max-width: 400px; margin: 50px auto; }
+    input, textarea { width: 100%; margin-bottom: 10px; padding: 8px; }
+    button { padding: 8px 16px; }
+    .success, .error { margin-top: 10px; padding: 10px; display: none; }
+    .success { background-color: #d4edda; color: #155724; }
+    .error { background-color: #f8d7da; color: #721c24; }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Contact Me</h1>
-        <p>Feel free to contact us and we will get back to you ass sson as we can.</p>
-        <form action="g/mail.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
-            <label for="subject">Subject:</label>
-            <input type="text" name="subject" id="subject" required>
-            <label for="message">Message</label>
-            <textarea name="message" cols="30" rows="10" required></textarea>
-            <input type="submit" value="Send">
-        </form>
-    </div>
+
+<form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+    <div class="success">Message sent successfully!</div>
+    <div class="error">There was an error sending your message.</div>
+</form>
+
+<script src="main.js"></script>
 </body>
 </html>
-
-
